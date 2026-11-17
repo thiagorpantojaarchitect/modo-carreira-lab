@@ -108,8 +108,18 @@ def missao4():
     r = run("kubectl get deployment api -n loja -o json", check=False)
     prontos = json.loads(r.stdout).get("status", {}).get("readyReplicas", 0) if r.returncode == 0 else 0
     ok(prontos == 2, "2 pods da api prontos")
-    yamls = "".join(p.read_text(encoding="utf-8") for p in (pasta / "k8s").glob("*.y*ml"))
-    ok("DATABASE_URL" in yamls, "correção registrada nos YAML (não só no cluster)")
+    import yaml
+    def nomes_env(doc):
+        if not isinstance(doc, dict) or doc.get("kind") != "Deployment":
+            return []
+        cs = (((doc.get("spec") or {}).get("template") or {}).get("spec") or {}).get("containers") or []
+        return [e.get("name") for c in cs for e in (c.get("env") or [])] + \
+               [r for c in cs for f in (c.get("envFrom") or []) for r in ("envFrom",)]
+    envs = []
+    for p in (pasta / "k8s").glob("*.y*ml"):
+        for doc in yaml.safe_load_all(p.read_text(encoding="utf-8")):
+            envs += nomes_env(doc)
+    ok("DATABASE_URL" in envs or "envFrom" in envs, "correção registrada nos YAML (env do Deployment, não só no cluster)")
     pi = pasta / "POS-INCIDENTE.md"
     linhas = [l for l in pi.read_text(encoding="utf-8").splitlines() if l.strip()] if pi.exists() else []
     ok(len(linhas) >= 4, "POS-INCIDENTE.md escrito (pelo menos 4 linhas)")
