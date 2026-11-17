@@ -1,0 +1,13 @@
+{
+  "name": "Modo Carreira · laboratório",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": { "minikube": "none", "helm": "none" },
+    "ghcr.io/devcontainers-extra/features/kind:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "pip install --user pyyaml && echo 'Bem-vindo ao Modo Carreira. Comece em missoes/01-base/MISSAO.md'",
+  "hostRequirements": { "cpus": 4 }
+}

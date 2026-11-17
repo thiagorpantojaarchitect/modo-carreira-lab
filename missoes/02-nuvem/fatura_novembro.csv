@@ -1,0 +1,14 @@
+servico,recurso,projeto,custo_brl
+compute,vm-api-01,loja,616.81
+compute,vm-api-02,loja,633.06
+compute,vm-batch,dados,407.46
+storage,bucket-logs,loja,96.05
+storage,bucket-backup,dados,175.25
+database,sql-loja,loja,900.59
+network,nat-gateway,loja,134.88
+network,egress-internet,loja,729.4
+kubernetes,gke-node-pool,plataforma,1314.06
+analytics,bq-consultas,dados,1218.1
+ai,api-modelos,produto,151.27
+logging,logs-ingestao,plataforma,609.49
+compute,vm-teste-esquecida,produto,530.0

@@ -1,0 +1,23 @@
+name: missao-4
+on:
+  push:
+    paths: ["missoes/04-plataforma/**", "scripts/**", ".github/workflows/missao-4.yml"]
+  pull_request:
+    paths: ["missoes/04-plataforma/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  estrela:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - uses: helm/kind-action@v1
+        with:
+          cluster_name: modo-carreira
+      - run: kubectl apply -f missoes/04-plataforma/k8s/
+      - run: python3 scripts/checar.py 4

@@ -1,0 +1,8 @@
+# Missão 2 · preencha e rode: python3 scripts/checar.py 2
+aumento_total_brl: 0          # novembro menos outubro, em reais (pode arredondar)
+recursos_que_mais_cresceram:  # entre os que já existiam em outubro: os 3 com maior aumento em reais, do maior para o menor
+  - ""
+  - ""
+  - ""
+recurso_novo: ""              # o recurso que não existia em outubro
+alerta_orcamento_percentual: 0  # em que % do orçamento o alerta deve disparar (entre 50 e 90)

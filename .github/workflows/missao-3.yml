@@ -1,0 +1,22 @@
+name: missao-3
+on:
+  push:
+    paths: ["missoes/03-esteira/**", "scripts/**", ".github/workflows/missao-3.yml"]
+  pull_request:
+    paths: ["missoes/03-esteira/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  estrela:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+      - run: python3 scripts/checar.py 3
