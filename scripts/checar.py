@@ -51,7 +51,7 @@ def checar_bucket_seguro(rc, exigir_cripto_tags=False):
     ok(any((v.get("versioning_configuration") or [{}])[0].get("status") == "Enabled" for v in vers), "versionamento ligado")
     pab = por_tipo(rc, "aws_s3_bucket_public_access_block")
     chaves = ["block_public_acls", "block_public_policy", "ignore_public_acls", "restrict_public_buckets"]
-    ok(any(all(p.get(k) is True for k in chaves) for p in pab), "4 bloqueios públicos ligados")
+    ok(any(all(p.get(k) is True for k in chaves) for p in pab), "4 bloqueios de acesso público")
     if exigir_cripto_tags:
         sse = por_tipo(rc, "aws_s3_bucket_server_side_encryption_configuration")
         algs = [((s.get("rule") or [{}])[0].get("apply_server_side_encryption_by_default") or [{}])[0].get("sse_algorithm") for s in sse]
