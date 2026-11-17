@@ -1,3 +1,5 @@
+![Missão 2](../../assets/missao-2.svg)
+
 # Missão 2 · Nuvem · A conta que estoura
 
 A fatura de novembro chegou bem maior que a de outubro. O financeiro quer saber o motivo até o fim do dia.
@@ -19,4 +21,6 @@ python3 -c "import csv;print(sum(float(r['custo_brl']) for r in csv.DictReader(o
 ```bash
 python3 scripts/checar.py 2
 ```
+![Missão cumprida](../../assets/cumprida.svg)
+
 Recompensa: ★ Nuvem destravada. Dados fictícios.

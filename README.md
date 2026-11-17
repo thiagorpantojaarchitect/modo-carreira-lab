@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.svg" alt="Modo Carreira · o laboratório" width="100%"></p>
+
 # Modo Carreira · o laboratório
 
 **Cinco missões reais para atravessar o mapa da carreira em tecnologia: do suporte até a IA aplicada.**
@@ -21,6 +23,8 @@ Cada missão roda de graça, no seu computador ou no navegador, sem conta na nuv
 4. Confira localmente: `python3 scripts/checar.py 1` (troque pelo número da missão).
 5. Faça commit e push. A estrela acende quando a verificação passa no GitHub Actions.
 
+<p align="center"><img src="assets/cumprida.svg" alt="Missão cumprida" width="100%"></p>
+
 ## Regras do jogo
 
 - Não existe atalho: a verificação olha o resultado, não o texto.
@@ -30,12 +34,22 @@ Cada missão roda de graça, no seu computador ou no navegador, sem conta na nuv
 
 ## Mapa
 
-```
-1 BASE ──► 2 NUVEM ──► 3 ESTEIRA ──► 4 PLATAFORMA ──► 5 IA APLICADA
-linux      custo        git + IaC      kubernetes        agentes + prova
-```
+<p align="center"><img src="assets/mapa.svg" alt="Mapa: Base, Nuvem, Esteira, Plataforma, IA aplicada" width="100%"></p>
+
+## As missões
+
+[![Missão 1](assets/missao-1.svg)](missoes/01-base/MISSAO.md)
+
+[![Missão 2](assets/missao-2.svg)](missoes/02-nuvem/MISSAO.md)
+
+[![Missão 3](assets/missao-3.svg)](missoes/03-esteira/MISSAO.md)
+
+[![Missão 4](assets/missao-4.svg)](missoes/04-plataforma/MISSAO.md)
+
+[![Missão 5](assets/missao-5.svg)](missoes/05-ia-aplicada/MISSAO.md)
+
 
 ## Créditos
 
 Criado por Thiago Pantoja · [@euthiagorpantoja](https://www.instagram.com/euthiagorpantoja/). Licença MIT.
-Claude e GPT são citados só como exemplo de assistente; as marcas pertencem aos seus donos. Este laboratório não tem relação com nenhum jogo ou estúdio.
+Claude e GPT são citados só como exemplo de assistente; as marcas pertencem aos seus donos. Este laboratório não tem relação com nenhum jogo ou estúdio. Fontes Anton e JetBrains Mono sob a licença OFL (`assets/fonts`). As artes são geradas por `scripts/gerar_svgs.py` e respeitam a preferência de movimento reduzido.

@@ -1,3 +1,5 @@
+![Missão 3](../../assets/missao-3.svg)
+
 # Missão 3 · Esteira · O deploy que quebra
 
 O time sobe bucket pelo console e cada um configura de um jeito. Na última vez, um bucket ficou público.
@@ -27,4 +29,6 @@ terraform apply
 ```bash
 python3 scripts/checar.py 3
 ```
+![Missão cumprida](../../assets/cumprida.svg)
+
 Recompensa: ★ Esteira destravada. A verificação lê o plan, não o texto.

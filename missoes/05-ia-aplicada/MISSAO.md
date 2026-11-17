@@ -1,3 +1,5 @@
+![Missão 5](../../assets/missao-5.svg)
+
 # Missão 5 · IA aplicada · Prove que a IA acertou
 
 Use o assistente que quiser (Claude, GPT ou outro) para escrever um módulo Terraform. A IA escreve. O plan confere. **Você aprova e explica.**
@@ -32,4 +34,6 @@ Não invente versões nem argumentos. Na dúvida, escreva "conferir na doc".
 cd missoes/05-ia-aplicada && terraform init && terraform validate
 python3 scripts/checar.py 5
 ```
+![Missão cumprida](../../assets/cumprida.svg)
+
 Recompensa: ★ IA aplicada destravada. Chefão vencido.

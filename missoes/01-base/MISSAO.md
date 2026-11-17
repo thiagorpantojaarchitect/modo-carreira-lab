@@ -1,3 +1,5 @@
+![Missão 1](../../assets/missao-1.svg)
+
 # Missão 1 · Base · O primeiro incidente sozinho
 
 O site da loja caiu às 3 da manhã. Ninguém mais está online. Você tem o terminal.
@@ -21,4 +23,6 @@ docker compose logs web
 ```bash
 python3 scripts/checar.py 1
 ```
+![Missão cumprida](../../assets/cumprida.svg)
+
 Recompensa: ★ Base destravada.

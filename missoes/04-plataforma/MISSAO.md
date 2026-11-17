@@ -1,3 +1,5 @@
+![Missão 4](../../assets/missao-4.svg)
+
 # Missão 4 · Plataforma · O pós-incidente sem culpado
 
 A API da loja entrou em `CrashLoopBackOff` depois da última mudança. Sua missão: colocar de pé, do jeito certo, e escrever o pós-incidente.
@@ -21,4 +23,6 @@ Dica: o banco do laboratório pode ser só um texto, como `postgres://lab:lab@ba
 ```bash
 python3 scripts/checar.py 4
 ```
+![Missão cumprida](../../assets/cumprida.svg)
+
 Recompensa: ★ Plataforma destravada.
